@@ -77,7 +77,7 @@ class TestVarasto(unittest.TestCase):
         saldo_alussa = self.varasto.saldo
         liikaa = self.varasto.ota_varastosta(saldo_alussa +9001)
         self.assertAlmostEqual(liikaa, saldo_alussa)
-        self.assertAlmostEqual(self.varasto.saldo, 2)
+        self.assertAlmostEqual(self.varasto.saldo, 0)
     
     def test_varasto_tulostuu_oikein(self):
         oletustuloste= f"saldo = {self.varasto.saldo}, vielä tilaa {self.varasto.paljonko_mahtuu()}"
